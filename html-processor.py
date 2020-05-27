@@ -11,3 +11,6 @@ with open("testpage.txt","r") as fp:
   #2. απαλοιφή σχολίων
   repx2 = re.compile(r"<!--.*?-->",re.DOTALL)
   
+  #3. απαλοιφή <script> / <style>
+  repx3 = re.compile(r"(<script.*?</script>) | (<style.*?</style>)",re.DOTALL)
+  
