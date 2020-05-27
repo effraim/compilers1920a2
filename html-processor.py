@@ -26,4 +26,13 @@ with open("testpage.txt","r") as fp:
   #7. μετατροπή whitespace σε ένα κενό
   repx7 = re.compile(r"\s+")
   
-  
+  #callback function για την μετατροπή των html entities
+  def func(m):
+    if m.group(0) == "&amp;":
+      return '&'
+    elif m.group(0) == "&gt;":
+      return '>'
+    elif m.group(0) == "&lt;":
+      return '<'
+    elif m.group(0) == "&nbsp;":
+      return ' '
