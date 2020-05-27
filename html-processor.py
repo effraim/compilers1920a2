@@ -50,4 +50,5 @@ with open("testpage.txt","r") as fp:
   
   text5 = repx7.sub(" ", text4)
   
+  #εκτύπωση του κειμένου μετά τις μετατροπές
   print(text5)
