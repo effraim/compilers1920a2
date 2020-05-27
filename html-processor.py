@@ -14,3 +14,10 @@ with open("testpage.txt","r") as fp:
   #3. απαλοιφή <script> / <style>
   repx3 = re.compile(r"(<script.*?</script>) | (<style.*?</style>)",re.DOTALL)
   
+  #4. εξαγωγή και print του <a>
+  repx4 = re.compile(r"<a(.+?)</a>",re.DOTALL)
+  
+  #5. απαλοιφή όλων των tags
+  rexp5 = re.compile(r"<.+?>",re.DOTALL)
+  
+  
