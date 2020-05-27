@@ -4,7 +4,7 @@ with open("testpage.txt","r") as fp:
   text = fp.read()
   #1. εξαγωγή και εκτύπωση του τίτλου
   
-  rexp = re.compile(r"<title>(.+?)</title>")
+  repx = re.compile(r"<title>(.+?)</title>")
   m = repx.search(text)
   printf(m.group(1))
   
@@ -18,6 +18,12 @@ with open("testpage.txt","r") as fp:
   repx4 = re.compile(r"<a(.+?)</a>",re.DOTALL)
   
   #5. απαλοιφή όλων των tags
-  rexp5 = re.compile(r"<.+?>",re.DOTALL)
+  repx5 = re.compile(r"<.+?>",re.DOTALL)
+  
+  #6. μετατροπή html entities
+  repx6 = re.compile(r"(&amp;|&gt;|&lt;|&nbsp;)",re.DOTALL)
+  
+  #7. μετατροπή whitespace σε ένα κενό
+  repx7 = re.compile(r"\s+")
   
   
