@@ -36,3 +36,18 @@ with open("testpage.txt","r") as fp:
       return '<'
     elif m.group(0) == "&nbsp;":
       return ' '
+  
+  text1 = repx2.sub("", text)
+  
+  text2 = repx3.sub("", text1)
+  
+  for m in repx4.finditer(text2):
+    print(m.group(1))
+  
+  text3 = repx5.sub("", text2)
+  
+  text4 = repx6.sub(func, text3)
+  
+  text5 = repx7.sub(" ", text4)
+  
+  print(text5)
